@@ -2,6 +2,12 @@
 
 ---
 
+Find the latest job report [here]()
+
+---
+
+---
+
 > *causal-jobs* is a jobs analytics project
 > dedicated to revealing the status of
 > **causal inference** in the European job market
