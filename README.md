@@ -2,9 +2,7 @@
 
 ---
 
-Find the latest job report [here]()
-
----
+Find the latest job report [here](https://github.com/ggiannarakis/causal-jobs/blob/main/Analysis.ipynb)
 
 ---
 
