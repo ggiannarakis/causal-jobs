@@ -2,7 +2,7 @@
 
 ---
 
-Find the latest job report [here](https://github.com/ggiannarakis/causal-jobs/blob/main/Analysis.ipynb)
+Find the latest job report [here](https://ggiannarakis.github.io/causal-jobs/)
 
 ---
 
@@ -38,11 +38,6 @@ relevant information.
 
 ---
 
-## Report Sample
-
-![](report-sample-1.png)
-![](report-sample-2.png)
-
 ## Wordcloud from all *causal-jobs* titles
 
 ![](causal-wordcloud.png)
@@ -64,7 +59,7 @@ and label it "causal-jobs". Finally, create a
 [Gmail filter](https://support.google.com/a/users/answer/9308833?hl=en)
 in order to automatically label the daily job alert
 emails under the ```causal-jobs``` folder. This is where
-the ```exact.py``` script will be looking for new
+the ```extract.py``` script will be looking for new
 emails.
 
 
@@ -84,8 +79,8 @@ will help:
 
 ### 2. Create the Extract & Transform scripts
 
-Develop an ```exact.py``` and a ```transform.py```
-Python script (see mine or links above). The ```exact.py```
+Develop an ```extract.py``` and a ```transform.py```
+Python script (see mine or links above). The ```extract.py```
 script requests the last job alert email(s)
 and extracts it  from the ```causal-jobs``` 
 folder of your Gmail via Python to local host. Then,
@@ -114,7 +109,7 @@ The ```load.py``` initially executes the
 ```extract.py``` and ```transform.py``` scripts, i.e.
 retrieves the latest email as a Pandas dataframe
 that's ready for insertion into the database. 
-Then, it talks with the postgres database in
+Then, it connects with the postgres database in
 the running Docker container 
 and performs the following actions:
 
@@ -128,7 +123,9 @@ the ETL routine daily, performing all relevant actions
 (see ```causal-jobs-powershell.ps1```, Widows in my case). Then using Task Scheduler / Cron set up a daily task
 at a convenient time to execute the aforementioned script.
 If you miss a day or two (e.g. due to localhost being offline)
-you can always manually execute the task.
+you can always manually execute the task provided the
+missing email is the last among the emails labeled
+as *causal-jobs*.
 
 ### 6. Create the Analysis script
 
@@ -136,7 +133,7 @@ Develop a Python script that connects to the
 postgres database of the running Docker container
 and performs all sorts of 
 *causal-jobs* analysis you would like
-to see! See ```Analysis.ipynb``` Jupyter notebook 
+to see! See the ```Analysis.ipynb``` notebook 
 for inspiration.
 
 ### 7. Schedule the weekly Analysis report & upload it
@@ -145,9 +142,10 @@ Just like #5, schedule a weekly PowerShell / Bash
 script that executes the Jupyter notebook 
 ```Analysis.ipynb```, generating the weekly report.
 The report can be extracted in 
-html form via the command line 
-(see ```causal-analysis-weekly-powershell.ps1```).
-Finally, using the script above,
+html form via the command line.
+Finally, using the 
+```causal-analysis-weekly-powershell.ps1```
+script above,
 upload the latest weekly report
 from localhost to the dedicated Github 
 [page](https://ggiannarakis.github.io/causal-jobs/) 
