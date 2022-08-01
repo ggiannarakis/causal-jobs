@@ -3,7 +3,7 @@ credentials.json
 token.json
 
 # images to ignore
-architecture.drawio
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm
