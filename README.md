@@ -141,12 +141,15 @@ for inspiration.
 Just like #5, schedule a weekly PowerShell / Bash
 script that executes the Jupyter notebook 
 ```Analysis.ipynb```, generating the weekly report.
-The report can be extracted in 
+The report is then extracted in 
 html form via the command line.
+Create a [Github page](https://pages.github.com/)
+for your repo.
 Finally, using the 
 ```causal-analysis-weekly-powershell.ps1```
-script above,
-upload the latest weekly report
-from localhost to the dedicated Github 
-[page](https://ggiannarakis.github.io/causal-jobs/) 
-of the project.
+script above, 
+push the latest weekly report as ```index.html```
+(required for Github page deployment)
+from localhost to the Github repo. Your *causal-jobs*
+report is
+[live](https://ggiannarakis.github.io/causal-jobs/)!
