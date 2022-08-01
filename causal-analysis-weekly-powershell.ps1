@@ -6,6 +6,7 @@ cd C:\Users\ggian\Documents\git-repos\causal-jobs
 conda activate gmailapi
 python Analysis.ipynb
 jupyter nbconvert Analysis.ipynb --to html --no-input --no-prompt
+Remove-Item .\index.html
 Rename-Item -Path .\Analysis.html -NewName "index.html"
 docker stop 9ed479c5a42f
 git add --all

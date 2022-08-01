@@ -4,7 +4,7 @@ token.json
 
 # for now ignore analysis-generating notebook (WIP) and sample html
 # Analysis.ipynb
-Analysis.html
+# Analysis.html
 
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm
