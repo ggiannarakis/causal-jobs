@@ -68,7 +68,7 @@ the ```exact.py``` script will be looking for new
 emails.
 
 
-### 1. Setup the GmailAPI
+### 1. Set up the GmailAPI
 
 Begin by setting up the 
 [Gmail API](https://developers.google.com/gmail/api) 
@@ -148,4 +148,4 @@ The report can be extracted in
 html form via the command line 
 (see ```causal-analysis-weekly-powershell.ps1```).
 Finally, upload the latest weekly report
-from localhost to  
+from localhost to
