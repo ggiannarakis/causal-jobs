@@ -147,5 +147,8 @@ script that executes the Jupyter notebook
 The report can be extracted in 
 html form via the command line 
 (see ```causal-analysis-weekly-powershell.ps1```).
-Finally, upload the latest weekly report
-from localhost to
+Finally, using the script above,
+upload the latest weekly report
+from localhost to the dedicated Github 
+[page](https://ggiannarakis.github.io/causal-jobs/) 
+of the project.
