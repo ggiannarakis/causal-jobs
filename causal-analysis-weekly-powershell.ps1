@@ -9,5 +9,5 @@ Remove-Item .\index.html
 Rename-Item -Path .\Analysis.html -NewName "index.html"
 docker stop 9ed479c5a42f
 git add --all
-git commit -m "more automation on weekly report"
+git commit -m "latest report"
 git push

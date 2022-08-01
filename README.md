@@ -2,7 +2,7 @@
 
 ---
 
-Find the latest job report [here](https://ggiannarakis.github.io/causal-jobs/)
+Find the latest job report [here](https://ggiannarakis.github.io/causal-jobs/) (*updates every Tuesday*)
 
 ---
 
@@ -71,7 +71,9 @@ to create a simple Python command-line application
 that makes requests. This is done through the
 Google Cloud console. Make sure to complete the
 OAuth consent screen and push the Gmail API app you
-have created to production. The following links
+have created to production. Remember to put your
+```credentials.json``` and ```token.json```
+file on ```.gitignore```. The following links
 will help:
 
 - https://developers.google.com/gmail/api/quickstart/python
