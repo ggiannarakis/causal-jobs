@@ -19,6 +19,16 @@ def transform():
     df = pd.DataFrame()
     body = str(body)
 
+    # UPDATE Sep 13, 2022: Linkedin no longer precedes the first job
+    # with a '---' hence breaking the indices computed below
+    # For now, will be manually adding a '---' right after the
+    # 'match your preferences' part of the email body string
+    # so the algorithm will proceed as normal
+    for m in re.finditer('match your preferences', body):
+        idx_to_insert = m.end()
+
+    body = body[:idx_to_insert] + '---------------------------------------------------------' + body[idx_to_insert:]
+
     # get end position of each job by selecting the string element
     # right before each 'View Job' occurrence
     idx_to_end = []
@@ -53,18 +63,27 @@ def transform():
     job_location = []
 
     # clean each job and split its elements (title, company, location)
+    # UPDATE Sep 13, 2022: Minor changes in '\r', '\n' occurrence,
+    # adapting this part too
     for i in content:
         temp = i.replace('\n', '').replace('amp;', '').split('\r')
-        job_title.append(temp[1])
-        company_name.append(temp[2])
-        job_location.append(temp[3])
+        job_title.append(temp[2])
+        company_name.append(temp[3])
+        job_location.append(temp[4])
 
     # define dataframe columns appropriately
     # ensure datetime type for date column
     df['job_title'] = job_title
     df['company_name'] = company_name
     df['job_location'] = job_location
-    df[['city', 'region', 'country']] = df['job_location'].str.split(',', expand=True)
+    # geographic format no longer regular
+    # commenting out analytic information
+    # simply duplicating the location on city, region, country columns
+    # to comply with db table
+    # df[['city', 'region', 'country']] = df['job_location'].str.split(',', expand=True)
+    df['city'] = job_location
+    df['region'] = job_location
+    df['country'] = job_location
     df['email_id'] = msg_id
     df['email_date'] = datetime.strptime(date[:date.find('202')+4].replace(',', '').lstrip(), '%a %d %b %Y')
 
