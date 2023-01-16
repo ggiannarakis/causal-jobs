@@ -3,6 +3,7 @@ from __future__ import print_function
 import base64
 import os.path
 from bs4 import BeautifulSoup
+import logging
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -12,6 +13,12 @@ from googleapiclient.discovery import build
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
+# set the log level
+logging.basicConfig(level=logging.DEBUG,
+                    filename='extract-logs.log',
+                    format='%(asctime)s %(message)s',
+                    datefmt='%m/%d/%Y %I:%M:%S %p',
+                    filemode='w')
 
 def main():
     """
@@ -75,8 +82,14 @@ def main():
         soup = BeautifulSoup(decoded_data, "lxml")
         body = soup.body()
 
+        logging.info("Extracted email id: " + str(msg['id']))
+        logging.info("Extracted email date: " + str(date))
+        logging.info("Extracted email body: " + str(body))
+
         # return email body, email id, email date
         return body, msg['id'], date
 
 if __name__ == '__main__':
+    logging.info("Executing ``main`` function from extract.py")
     main()
+    logging.info("Finished executing ``main`` function from extract.py")

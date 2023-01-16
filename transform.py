@@ -4,20 +4,37 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 
+import logging
+
+# set the log level
+logging.basicConfig(level=logging.DEBUG,
+                    filename='transform-logs.log',
+                    format='%(asctime)s %(message)s',
+                    datefmt='%m/%d/%Y %I:%M:%S %p',
+                    filemode='w')
+
 def transform():
     """
-    retrieve the latest email of the 'causal-jobs' Gmail folder
+    Retrieves the latest email of the 'causal-jobs' Gmail folder
     by calling the main function from extract.py.
     Transforms it into a pandas dataframe where each row is a job
     that the email contains, and each column contains info about it
     """
 
     # call main from extract.py and get its components
-    body, msg_id, date = main()
+    try:
+        body, msg_id, date = main()
+    except Exception as e:
+        logging.error("Unable to extract email components: extract.py main function failed: {}".format(e))
 
     # init df and transform email body to string
     df = pd.DataFrame()
     body = str(body)
+
+    # find the total number of jobs found (if over a threshold, they are not included in the email)
+    # the threshold used to be 10, it was lowered in July 2022 to 6
+    job_number = re.search(r"\d+", body)
+    job_number = job_number.group()
 
     # UPDATE Sep 13, 2022: Linkedin no longer precedes the first job
     # with a '---' hence breaking the indices computed below
