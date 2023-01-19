@@ -3,11 +3,10 @@ import re
 import numpy as np
 import pandas as pd
 from datetime import datetime
-
 import logging
 
 # set the log level
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.INFO,
                     filename='transform-logs.log',
                     format='%(asctime)s %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
@@ -93,6 +92,7 @@ def transform():
     df['job_title'] = job_title
     df['company_name'] = company_name
     df['job_location'] = job_location
+
     # geographic format no longer regular
     # commenting out analytic information
     # simply duplicating the location on city, region, country columns
@@ -101,8 +101,17 @@ def transform():
     df['city'] = job_location
     df['region'] = job_location
     df['country'] = job_location
+
     df['email_id'] = msg_id
     df['email_date'] = datetime.strptime(date[:date.find('202')+4].replace(',', '').lstrip(), '%a %d %b %Y')
+    df['total_jobs'] = job_number
+
+    logging.info("Job titles extracted: \n" + str(df['job_title']))
+    logging.info("Company names extracted: \n" + str(df['company_name']))
+    logging.info("Job locations extracted: \n" + str(df['job_location']))
+    logging.info("email ids extracted: \n" + str(df['email_id']))
+    logging.info("email dates extracted: \n" + str(df['email_date']))
+    logging.info("total jobs of the email extracted: \n" + str(df['total_jobs']))
 
     # internal duplicate handling
     # keep only first occurrence of each job_title / company_name pair

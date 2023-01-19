@@ -82,9 +82,9 @@ def main():
         soup = BeautifulSoup(decoded_data, "lxml")
         body = soup.body()
 
-        logging.info("Extracted email id: " + str(msg['id']))
-        logging.info("Extracted email date: " + str(date))
-        logging.info("Extracted email body: " + str(body))
+        # logging.info("Extracted email id: " + str(msg['id']))
+        # logging.info("Extracted email date: " + str(date))
+        # logging.info("Extracted email body: " + str(body))
 
         # return email body, email id, email date
         return body, msg['id'], date

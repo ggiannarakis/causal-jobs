@@ -2,6 +2,11 @@
 credentials.json
 token.json
 
+# ignore python script that sends emails
+send_email.py
+# also, the temp csv it creates
+latest-causal-job.csv
+
 # images to ignore
 
 
