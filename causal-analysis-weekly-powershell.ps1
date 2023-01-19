@@ -1,4 +1,5 @@
-﻿cd 'C:\Program Files\Docker\Docker'
+﻿Start-Transcript 'C:\Users\ggian\Documents\git-repos\causal-jobs\weekly_job_log.txt' -Append
+cd 'C:\Program Files\Docker\Docker'
 start 'Docker Desktop.exe'
 Start-Sleep -Seconds 60
 docker start 9ed479c5a42f
@@ -12,3 +13,4 @@ Stop-Process -Name "Docker Desktop"
 git add --all
 git commit -m "latest report"
 git push
+Stop-Transcript
