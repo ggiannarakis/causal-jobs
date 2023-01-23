@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO,
                     filename='transform-logs.log',
                     format='%(asctime)s %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
-                    filemode='w')
+                    filemode='a')
 
 def transform():
     """
@@ -30,17 +30,18 @@ def transform():
     df = pd.DataFrame()
     body = str(body)
 
+    # no need for the below, unique job number calculation moved after duplicate handling
     # find the total number of jobs found (if over a threshold, they are not included in the email)
     # the threshold used to be 10, it was lowered in July 2022 to 6
-    job_number = re.search(r"\d+", body)
-    job_number = job_number.group()
+    # job_number = re.search(r"\d+", body)
+    # job_number = job_number.group()
 
     # UPDATE Sep 13, 2022: Linkedin no longer precedes the first job
     # with a '---' hence breaking the indices computed below
     # For now, will be manually adding a '---' right after the
     # 'match your preferences' part of the email body string
     # so the algorithm will proceed as normal
-    for m in re.finditer('match your preferences', body):
+    for m in re.finditer('(match|matches) your preferences', body):
         idx_to_insert = m.end()
 
     body = body[:idx_to_insert] + '---------------------------------------------------------' + body[idx_to_insert:]
@@ -104,17 +105,18 @@ def transform():
 
     df['email_id'] = msg_id
     df['email_date'] = datetime.strptime(date[:date.find('202')+4].replace(',', '').lstrip(), '%a %d %b %Y')
-    df['total_jobs'] = job_number
 
     logging.info("Job titles extracted: \n" + str(df['job_title']))
     logging.info("Company names extracted: \n" + str(df['company_name']))
     logging.info("Job locations extracted: \n" + str(df['job_location']))
     logging.info("email ids extracted: \n" + str(df['email_id']))
     logging.info("email dates extracted: \n" + str(df['email_date']))
-    logging.info("total jobs of the email extracted: \n" + str(df['total_jobs']))
 
     # internal duplicate handling
     # keep only first occurrence of each job_title / company_name pair
     df = df.groupby(['job_title', 'company_name']).first().reset_index()
+    # calculate unique total jobs
+    df['total_jobs'] = len(df)
+    logging.info("total jobs of the email extracted: \n" + str(df['total_jobs']))
 
     return df

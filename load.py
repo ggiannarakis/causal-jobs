@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO,
                     filename='load-logs.log',
                     format='%(asctime)s %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
-                    filemode='w')
+                    filemode='a')
 
 # get latest df of causal-jobs
 df = transform()
@@ -19,6 +19,7 @@ df = transform()
 try:
     engine = sqlalchemy.create_engine('postgresql://postgres:password@localhost:5432/causal-jobs-db')
     engine.connect()
+    logging.info("Successfully connected to database")
 except Exception as e:
     logging.error("Unable to establish database connection: {}".format(e))
 
@@ -33,11 +34,14 @@ try:
         df.to_sql('causal_jobs_extended', con=engine, if_exists='append', index=False)
         # store df locally to send to my email with send_email.py script (sanity check)
         df.to_csv('latest-causal-job.csv', index=False)
+        logging.info("Indexed a new email to the db.")
     else:
         df = pd.Series(['Indexed nothing. Working as intended if no email since last task execution.'])
         df.to_csv('latest-causal-job.csv', index=False)
+        logging.info("No new email. Indexed nothing to the db.")
 except Exception as e:
     logging.error("Unable to append latest email data to database table: {}".format(e))
 
 # close engine
 engine.dispose()
+logging.info("Successfully disconnected from the database")

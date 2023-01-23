@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.DEBUG,
                     filename='extract-logs.log',
                     format='%(asctime)s %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
-                    filemode='w')
+                    filemode='a')
 
 def main():
     """

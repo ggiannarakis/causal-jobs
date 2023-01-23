@@ -7,6 +7,10 @@ send_email.py
 # also, the temp csv it creates
 latest-causal-job.csv
 
+# 23-jan-23 experimental additions
+.idea/*
+_config.yml
+
 # images to ignore
 
 
