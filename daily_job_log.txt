@@ -2806,3 +2806,30 @@ connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection re
 Windows PowerShell transcript end
 End time: 20230123233022
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20230124233009
+Username: MININT-EOA9M6Q\ggian
+RunAs User: MININT-EOA9M6Q\ggian
+Configuration Name: 
+Machine: MININT-EOA9M6Q (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe C:\Users\ggian\Documents\git-repos\causal-jobs\causal-jobs-powershell.ps1
+Process ID: 11896
+PSVersion: 5.1.19041.2364
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.2364
+BuildVersion: 10.0.19041.2364
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\ggian\Documents\git-repos\causal-jobs\daily_job_log.txt
+9ed479c5a42f
+
+
+9ed479c5a42f
+**********************
+Windows PowerShell transcript end
+End time: 20230124233116
+**********************

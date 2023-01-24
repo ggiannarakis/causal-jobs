@@ -13,6 +13,9 @@ send_email.py
 # also, the temp csv it creates
 latest-causal-job.csv
 
+# ignore manual backup csv
+manual-backup-jan-23.csv
+
 # 23-jan-23 experimental additions
 .idea/*
 _config.yml
