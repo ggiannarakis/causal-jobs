@@ -70,7 +70,7 @@ nbformat==5.3.0
 nest-asyncio==1.5.5
 notebook==6.4.8
 numexpr==2.8.1
-numpy==1.21.5
+numpy
 oauthlib==3.2.0
 outcome==1.2.0
 packaging==21.3
