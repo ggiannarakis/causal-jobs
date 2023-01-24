@@ -2,6 +2,12 @@
 credentials.json
 token.json
 
+# ignore logs
+daily_job_log.txt
+weekly_job_log.txt
+causal-logs.log
+extract-logs.log
+
 # ignore python script that sends emails
 send_email.py
 # also, the temp csv it creates
