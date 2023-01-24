@@ -1,0 +1,41 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20230123233502
+Username: MININT-EOA9M6Q\ggian
+RunAs User: MININT-EOA9M6Q\ggian
+Configuration Name: 
+Machine: MININT-EOA9M6Q (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe C:\Users\ggian\Documents\git-repos\causal-jobs\causal-analysis-weekly-powershell.ps1
+Process ID: 10816
+PSVersion: 5.1.19041.2364
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.2364
+BuildVersion: 10.0.19041.2364
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\ggian\Documents\git-repos\causal-jobs\weekly_job_log.txt
+9ed479c5a42f
+[NbConvertApp] Converting notebook Analysis.ipynb to html
+[NbConvertApp] Writing 4359526 bytes to Analysis.html
+9ed479c5a42f
+
+[main 25fb244] latest report
+ 8 files changed, 3684 insertions(+), 34 deletions(-)
+ create mode 100644 manual-backup-jan-23.csv
+ create mode 100644 weekly_job_log.txt
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (26/26), 82.43 KiB | 1.29 MiB/s, done.
+Total 26 (delta 16), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (16/16), completed with 6 local objects.
+To https://github.com/ggiannarakis/causal-jobs
+   1edfa15..25fb244  main -> main
+**********************
+Windows PowerShell transcript end
+End time: 20230123233617
+**********************
