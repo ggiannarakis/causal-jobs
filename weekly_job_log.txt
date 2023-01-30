@@ -138,3 +138,60 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 Windows PowerShell transcript end
 End time: 20230131000122
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20230131001257
+Username: MININT-EOA9M6Q\ggian
+RunAs User: MININT-EOA9M6Q\ggian
+Configuration Name: 
+Machine: MININT-EOA9M6Q (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe C:\Users\ggian\Documents\git-repos\causal-jobs\causal-analysis-weekly-powershell.ps1
+Process ID: 19364
+PSVersion: 5.1.19041.2364
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.2364
+BuildVersion: 10.0.19041.2364
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\ggian\Documents\git-repos\causal-jobs\weekly_job_log.txt
+9ed479c5a42f
+[NbConvertApp] Converting notebook Analysis.ipynb to html
+[NbConvertApp] Writing 1231124 bytes to Analysis.html
+9ed479c5a42f
+
+[main 9e0493f] latest report
+ 20 files changed, 1 insertion(+), 17907 deletions(-)
+ delete mode 100644 _site/Analysis.ipynb
+ delete mode 100644 _site/LICENSE
+ delete mode 100644 _site/README.md
+ delete mode 100644 _site/architecture-transparent.png
+ delete mode 100644 _site/architecture.drawio
+ delete mode 100644 _site/assets/main.css
+ delete mode 100644 _site/assets/minima-social-icons.svg
+ delete mode 100644 _site/causal-analysis-weekly-powershell.ps1
+ delete mode 100644 _site/causal-jobs-powershell.ps1
+ delete mode 100644 _site/causal-wordcloud.png
+ delete mode 100644 _site/extract.py
+ delete mode 100644 _site/feed.xml
+ delete mode 100644 _site/index.html
+ delete mode 100644 _site/load.py
+ delete mode 100644 _site/packages.txt
+ delete mode 100644 _site/requirements.txt
+ delete mode 100644 _site/streamlit-app.py
+ delete mode 100644 _site/transform.py
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 415.33 KiB | 7.42 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ggiannarakis/causal-jobs
+   3dc526e..9e0493f  main -> main
+**********************
+Windows PowerShell transcript end
+End time: 20230131001415
+**********************
