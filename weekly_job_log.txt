@@ -39,3 +39,62 @@ To https://github.com/ggiannarakis/causal-jobs
 Windows PowerShell transcript end
 End time: 20230123233617
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20230130233502
+Username: MININT-EOA9M6Q\ggian
+RunAs User: MININT-EOA9M6Q\ggian
+Configuration Name: 
+Machine: MININT-EOA9M6Q (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe C:\Users\ggian\Documents\git-repos\causal-jobs\causal-analysis-weekly-powershell.ps1
+Process ID: 16140
+PSVersion: 5.1.19041.2364
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.2364
+BuildVersion: 10.0.19041.2364
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\ggian\Documents\git-repos\causal-jobs\weekly_job_log.txt
+9ed479c5a42f
+[NbConvertApp] Converting notebook Analysis.ipynb to html
+[NbConvertApp] Writing 1269123 bytes to Analysis.html
+9ed479c5a42f
+warning: LF will be replaced by CRLF in Analysis.ipynb.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in _site/Analysis.ipynb.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in _site/assets/main.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in _site/assets/minima-social-icons.svg.
+The file will have its original line endings in your working directory
+[main 55af681] latest report
+ 22 files changed, 16740 insertions(+), 16953 deletions(-)
+ rewrite Analysis.ipynb (92%)
+ copy Analysis.ipynb => _site/Analysis.ipynb (100%)
+ create mode 100644 _site/LICENSE
+ create mode 100644 _site/README.md
+ create mode 100644 _site/architecture-transparent.png
+ create mode 100644 _site/architecture.drawio
+ create mode 100644 _site/assets/main.css
+ create mode 100644 _site/assets/minima-social-icons.svg
+ create mode 100644 _site/causal-analysis-weekly-powershell.ps1
+ create mode 100644 _site/causal-jobs-powershell.ps1
+ create mode 100644 _site/causal-wordcloud.png
+ create mode 100644 _site/extract.py
+ create mode 100644 _site/feed.xml
+ copy index.html => _site/index.html (100%)
+ create mode 100644 _site/load.py
+ create mode 100644 _site/packages.txt
+ create mode 100644 _site/requirements.txt
+ create mode 100644 _site/streamlit-app.py
+ create mode 100644 _site/transform.py
+ rewrite index.html (80%)
+remote: Permission to ggiannarakis/causal-jobs.git denied to ggiannarakis.
+fatal: unable to access 'https://github.com/ggiannarakis/causal-jobs/': The requested URL returned error: 403
+**********************
+Windows PowerShell transcript end
+End time: 20230130233649
+**********************

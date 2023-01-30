@@ -2,6 +2,9 @@
 credentials.json
 token.json
 
+# not proceeding with streamlit for now, keeping it locally
+streamlit-app.py
+
 # ignore logs
 daily_job_log.txt
 weekly_job_log.txt
