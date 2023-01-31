@@ -4,6 +4,14 @@ token.json
 
 # not proceeding with streamlit for now, keeping it locally
 streamlit-app.py
+packages.txt
+
+# also ignore config (no jekyll for now)
+_config.yml
+
+# feb '23 beautification
+architecture.drawio
+causal-wordcloud.png
 
 # ignore logs
 daily_job_log.txt
@@ -20,7 +28,7 @@ latest-causal-job.csv
 manual-backup-jan-23.csv
 
 # 23-jan-23 experimental additions
-.idea/*
+.idea/**
 _config.yml
 
 # images to ignore
