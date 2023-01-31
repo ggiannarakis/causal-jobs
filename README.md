@@ -170,6 +170,5 @@ Finally, using the
 script above, 
 push the latest weekly report as ```index.html```
 (required for Github page deployment)
-from localhost to the Github repo. Your *causal-jobs*
-report is
+from localhost to the Github repo. Your report is
 [live](https://ggiannarakis.github.io/causal-jobs/)!
