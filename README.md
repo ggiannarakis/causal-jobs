@@ -1,5 +1,7 @@
 # Welcome to *causal-jobs*
 
+<img src="causal-jobs-img.png" width="296" height="160">
+
 ---
 
 Find the latest job report [here](https://ggiannarakis.github.io/causal-jobs/) (*updates every Tuesday*)
